@@ -184,9 +184,9 @@ Tabla Raza
   
 | id_raza | raza     |
 |---------|----------|
-| 0001    | Labrador |
-| 0002    | Buldog   |
-| 0003    | Persa    | 
+| 1    | Labrador |
+| 2    | Buldog   |
+| 3    | Persa    | 
   
   
  Tabla tipo_mascota
