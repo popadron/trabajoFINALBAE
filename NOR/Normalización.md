@@ -193,9 +193,9 @@ Tabla Raza
   
   | id_tipo | tipo   |
 |---------|--------|
-| 0001    | Gato   |
-| 0002    | Perro  |
-| 0003    | Conejo |
+| 1    | Gato   |
+| 2    | Perro  |
+| 3    | Conejo |
   
 Tabla gestion/ventas
   
