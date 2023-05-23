@@ -92,9 +92,21 @@ Tabla Factura
 | 4         | 80     | 0.07     | 85.60 |    
 
     
+Tabla Cliente 
     
+| dni_cliente | Nombre | Teléfono  | Correo               |
+|-------------|--------|-----------|----------------------|
+| 78745121    | Anya   | 644644644 | iLikePeanuts@mail.c  |
+| 78542136    | Queen  | 879879844 | noLoVIHvenir@mail.c  |
+| 78451235    | MoFan  | 456845823 | creditScore9m@mail.c |
    
- 
+ Tabla Tratamiento
+    
+ | id_tratamiento | id_mascota | Descripción               | Fecha      |
+|----------------|------------|---------------------------|------------|
+| 001            | 1          | Operación de rabo         | 2023-02-28 |
+| 002            | 2          | Limpieza Dental| 2023-04-12 |
+| 003            | 3          | Analisis de Orina     | 2023-05-01 |
     
     
     
@@ -124,5 +136,64 @@ Tabla Factura
   
   
   - En la tabla Personal, la dirección hay que separarla.
-  - En la tabla Clientes también se debe separar la direccíon de lo demás 
+  - En la tabla Clientes también se debe separar la direccíon de lo demás
+  
+  
+  Tabla tiene/direccion
+  
+  | dni_cliente | nombre_calle   |
+|-------------|----------------|
+| 78745121    | Los Geranios   |
+| 78542136    | Cruz de Piedra |
+| 78451235    | Algarrobo      |
+  
+  Tabla Calle
+  
+| nombre_calle | nombre_ciudad  | numero |
+|--------------|----------------|--------|
+| 78745121     | Los Geranios   | 8      |
+| 78542136     | Cruz de Piedra | 25     |
+| 78451235     | Algarrobo      | 56     |
+  
+Tabla Ciudad
+  
+| nombre_ciudad | nombre_comunidad           |
+|---------------|----------------------------|
+| La Laguna     | S/C Tenerife               |
+| Las Palmas    | Las Palmas de Gran Canaria |
+| Toledo        | Madrid                     |
+  
+Tabla Comunidad
+  
+| nombre_comunidad           |
+|----------------------------|
+| S/C Tenerife               |
+| Las Palmas de Gran Canaria |
+| Madrid                     |
+  
+Tabla Cargo  
+  
+| id_cargo | Cargo                   |
+|----------|-------------------------|
+| 1010     | Veterinario             |
+| 2020     | Cirujano                |
+| 3030     | Auxiliar de Veterinario |
+  
+Tabla Raza
+  
+| id_raza | raza     |
+|---------|----------|
+| 0001    | Labrador |
+| 0002    | Buldog   |
+| 0003    | Persa    | 
+  
+  
+ Tabla tipo_mascota
+  
+  | id_tipo | tipo   |
+|---------|--------|
+| 0001    | Gato   |
+| 0002    | Perro  |
+| 0003    | Conejo |
+  
   
