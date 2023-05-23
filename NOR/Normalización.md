@@ -138,7 +138,8 @@ Tabla Cliente
   - En la tabla Personal, la dirección hay que separarla.
   - En la tabla Clientes también se debe separar la direccíon de lo demás
   
-  
+  <div align="center">
+    
   Tabla tiene/direccion
   
   | dni_cliente | nombre_calle   |
@@ -228,7 +229,7 @@ Tabla cliente/atendido por
 | 78456123     | 002            |
 | 78451235     | 003            |
   
-  
+  </div>
   
   
   
