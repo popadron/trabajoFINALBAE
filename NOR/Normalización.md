@@ -151,9 +151,9 @@ Tabla Cliente
   
 | nombre_calle | nombre_ciudad  | numero |
 |--------------|----------------|--------|
-| 78745121     | Los Geranios   | 8      |
-| 78542136     | Cruz de Piedra | 25     |
-| 78451235     | Algarrobo      | 56     |
+| Los Geranios    | Las Palmas   | 8      |
+| Cruz de Piedra    | La Laguna | 25     |
+| Algarrobo     |   Toledo    | 56     |
   
 Tabla Ciudad
   
@@ -195,5 +195,40 @@ Tabla Raza
 | 0001    | Gato   |
 | 0002    | Perro  |
 | 0003    | Conejo |
+  
+Tabla gestion/ventas
+  
+  | dni_empleado | id_venta |
+|--------------|----------|
+| 78563021     | 454545   |
+| 78456123     | 545454   |
+| 45689321     | 884678   |
+  
+Tabla gestion/citas
+  
+  | dni_empleado | id_cita |
+|--------------|---------|
+| 78563021     | 0010    |
+| 78456123     | 0030    |
+| 45689321     | 0099    |
+  
+Tabla cliente/atendido por
+  
+  | dni_cliente | dni_empleado | fecha      |
+|-------------|--------------|------------|
+| 78542136    | 78563021     | 2023-12-22 |
+| 78451235    | 78456123     | 2024-01-31 |
+| 45689321    | 78451235     | 2024-05-12 |
+  
+  Tabla tratado_por
+  
+| dni_empleado | id_tratamiento |
+|--------------|----------------|
+| 78563021     | 001            |
+| 78456123     | 002            |
+| 78451235     | 003            |
+  
+  
+  
   
   
