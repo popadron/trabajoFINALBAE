@@ -59,11 +59,11 @@
     
  Tabla Personal
     
-| dni_empleado | Nombre    | Apellido  | Cargo | Teléfono  | Calle           |
-|--------------|-----------|-----------|-------|-----------|-----------------|
-| 78563021     | Ataulfo   | La Piedra | 1010  | 666666666 | C/ No quiero    |
-| 78456123     | Arnocledo | Pérez     | 2020  | 625459871 | C/ QUIEROACABAR |
-| 45689321     | Juliana   | Hérnandez | 3030  | 619231456 | C/ PIEDAD       |
+| dni_empleado | Nombre    | Apellido  | Cargo | Teléfono  | Calle           | Ciudad |
+|--------------|-----------|-----------|-------|-----------|-----------------|--------|
+| 78563021     | Ataulfo   | La Piedra | 1010  | 666666666 | 4               | 1      |
+| 78456123     | Arnocledo | Pérez     | 2020  | 625459871 | 5 | 2      |
+| 45689321     | Juliana   | Hérnandez | 3030  | 619231456 | 6       | 3      |
     
  Tabla cita
 
@@ -89,17 +89,18 @@ Tabla Factura
 | 1         | 30     | 0.07     | 32.10 |
 | 2         | 40     | 0.07     | 42.80 |
 | 3         | 50     | 0.07     | 53.50 |
-| 4         | 80     | 0.07     | 85.60 |    
+| 4         | 80     | 0.07     | 85.60 |
+    
 
     
 Tabla Cliente 
     
-| dni_cliente | Nombre | Teléfono  | Correo               |
-|-------------|--------|-----------|----------------------|
-| 78745121    | Anya   | 644644644 | iLikePeanuts@mail.c  |
-| 78542136    | Queen  | 879879844 | noLoVIHvenir@mail.c  |
-| 78451235    | MoFan  | 456845823 | creditScore9m@mail.c |
-   
+| dni_cliente | Nombre | Calle | Teléfono  | Correo               | Ciudad |
+|-------------|--------|-------|-----------|----------------------|--------|
+| 78745121    | Anya   | 1     | 644644644 | iLikePeanuts@mail.c  | 1      |
+| 78542136    | Queen  | 2     | 879879844 | noLoVIHvenir@mail.c  | 2      |
+| 78451235    | MoFan  | 3     | 456845823 | creditScore9m@mail.c | 3      |
+    
  Tabla Tratamiento
     
  | id_tratamiento | id_mascota | Descripción               | Fecha      |
@@ -108,26 +109,12 @@ Tabla Cliente
 | 002            | 2          | Limpieza Dental| 2023-04-12 |
 | 003            | 3          | Analisis de Orina     | 2023-05-01 |
     
-    
-    
-    
+  
     
   </div>
   
   
-  
- 
-  
-  
-
-
-  
-  
-  
-  
-  
-  
-  
+   
 #### 3. Comprobar si se cumple la 3ª Forma Normal<a name="id3"></a>
   
    #### Problemas encontrados:
@@ -140,38 +127,36 @@ Tabla Cliente
   
   <div align="center">
     
-  Tabla tiene/direccion
-  
-  | dni_cliente | nombre_calle   |
-|-------------|----------------|
-| 78745121    | Los Geranios   |
-| 78542136    | Cruz de Piedra |
-| 78451235    | Algarrobo      |
-  
+   
   Tabla Calle
   
-| nombre_calle | nombre_ciudad  | numero |
+| id_calle | nombre_calle  | numero |
 |--------------|----------------|--------|
-| Los Geranios    | Las Palmas   | 8      |
-| Cruz de Piedra    | La Laguna | 25     |
-| Algarrobo     |   Toledo    | 56     |
-  
+| 1    | Primavera   | 8      |
+| 2   | Cruz de piedra | 25     |
+| 3     |   El grial    | 56     |
+| 4     |   Armamento    | 56     |  
+| 5    |  Heraclio    | 80    |   
+| 6    |  El Cantico    | 244    |
+    
+    
+    
 Tabla Ciudad
   
-| nombre_ciudad | nombre_comunidad           |
-|---------------|----------------------------|
-| La Laguna     | S/C Tenerife               |
-| Las Palmas    | Las Palmas de Gran Canaria |
-| Toledo        | Madrid                     |
+| id_ciudad |     nombre_ciudad      | nombre_comunidad |
+|-----------|------------------------|------------------|
+| 1    | Las Palmas            | S/C Tenerife               |
+| 2    | La Laguna |Las Palmas de Gran Canaria |
+| 3    | Toledo                     |Comunidad de Madrid        |
   
 Tabla Comunidad
   
-| nombre_comunidad           |
+| comunidad           |
 |----------------------------|
-| S/C Tenerife               |
-| Las Palmas de Gran Canaria |
-| Madrid                     |
-  
+ | S/C Tenerife               |
+   | Las Palmas de Gran Canaria |
+   | Comunidad de Madrid        |
+    
 Tabla Cargo  
   
 | id_cargo | Cargo                   |
