@@ -52,7 +52,8 @@ sexo enum('H','M'),
 id_tipo int, 
 id_raza int, 
 foreign key(id_tipo) references tipo_mascota(id_tipo), 
-foreign key(id_raza) references raza(id_raza));
+foreign key(id_raza) references raza(id_raza),
+foreign key(dni_cliente) references cliente(dni_cliente));
 
 create table cita(
      id_cita int primary key,
