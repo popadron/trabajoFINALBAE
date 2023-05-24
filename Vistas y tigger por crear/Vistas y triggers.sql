@@ -22,4 +22,12 @@ inner join tipo_mascota as t on m.id_tipo=t.id_tipo;
 
 
 
+DELIMITER $$
+CREATE TRIGGER tr_ventas_historico 
+AFTER INSERT ON ventas
+FOR EACH ROW
+BEGIN 
+   INSERT INTO ventas_historico(dni_empleado, estado, fecha)
+   VALUES (NEW.dni_empleado, NEW.estado, CURDATE());
+END; $$
  

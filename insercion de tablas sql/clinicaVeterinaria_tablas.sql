@@ -121,6 +121,11 @@ primary key(dni_empleado,id_tratamiento),
 foreign key(dni_empleado) references personal(dni_empleado),
 foreign key(id_tratamiento) references tratamiento(id_tratamiento));
 
+create table ventas_historico(
+dni_empleado varchar(9),
+estado varchar(10),
+fecha date);
+
 
 
 
