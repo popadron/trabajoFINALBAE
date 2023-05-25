@@ -44,6 +44,34 @@ foreign key(calle) references calle(id_calle),
 foreign key(ciudad) references ciudad(id_ciudad));
 
 
+create table cliente ( 
+     dni_cliente varchar(9) primary key,
+     nombre varchar(15) not null,
+     calle int,
+     telefono int,
+     correo varchar(30) not null,
+     ciudad int,
+     foreign key(calle) references calle(id_calle),
+     foreign key(ciudad) references ciudad(id_ciudad));
+
+
+
+create table cita(
+     id_cita int primary key,
+     dni_cliente varchar(9),
+     fecha date,
+     foreign key(dni_cliente) references cliente(dni_cliente));
+
+create table factura (
+n_factura int primary key,
+precio double not null,
+impuesto double not null,
+total double not null);
+
+
+
+
+
 create table mascota(
 id_mascota int primary key, 
 dni_cliente varchar(9), 
@@ -55,33 +83,17 @@ foreign key(id_tipo) references tipo_mascota(id_tipo),
 foreign key(id_raza) references raza(id_raza),
 foreign key(dni_cliente) references cliente(dni_cliente));
 
-create table cita(
-     id_cita int primary key,
-     dni_cliente varchar(9),
-     fecha date);
-
-create table factura (
-n_factura int primary key,
-precio double not null,
-impuesto double not null,
-total double not null);
 
 create table venta(
 id_venta int primary key,
 n_factura int not null,
 dni_cliente varchar(9) not null,
 estado varchar(10) not null,
-fecha date);
+fecha date,
+foreign key(n_factura) references factura(n_factura),
+foreign key(dni_cliente) references cliente(dni_cliente));
 
-create table cliente ( 
-     dni_cliente varchar(9) primary key,
-     nombre varchar(15) not null,
-     calle int,
-     telefono int,
-     correo varchar(30) not null,
-     ciudad int,
-     foreign key(calle) references calle(id_calle),
-     foreign key(ciudad) references ciudad(id_ciudad));
+
 
 
 create table tratamiento(
