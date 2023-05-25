@@ -4,30 +4,31 @@
 -- creacion de tablas
 
 create table tipo_mascota(
-    id_tipo int primary key,
+    id_tipo int primary key auto_increment,
      tipo varchar(10));
 
 create table raza(
-     id_raza int primary key,
+     id_raza int primary key auto_increment,
      raza varchar(15));
 
 create table cargo(
-     id_cargo int primary key,
+     id_cargo int primary key auto_increment,
      cargo varchar(30));
 
 create table calle(
-    id_calle int primary key,
+    id_calle int primary key auto_increment,
     calle varchar(30));
 
 
 create table comunidad(
-comunidad varchar(30) primary key);
+id_comunidad int primary key auto_increment,
+comunidad varchar(30));
 
 
 create table ciudad(
- id_ciudad int primary key,
+ id_ciudad int primary key auto_increment,
  nombre_ciudad varchar(30),
- nombre_comunidad varchar(30),
+ id_comunidad int,
  foreign key(nombre_comunidad) references comunidad(comunidad));
 
 
@@ -38,7 +39,8 @@ nombre varchar(10),
 apellido varchar(15), 
 cargo int,
 telefono int, 
-calle int, ciudad int, 
+calle int, 
+ciudad int, 
 foreign key(cargo) references cargo(id_cargo), 
 foreign key(calle) references calle(id_calle), 
 foreign key(ciudad) references ciudad(id_ciudad));
