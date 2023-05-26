@@ -29,31 +29,25 @@ set nombre = concat('Antonio',contador);
 set apellido = concat('Gonzalez',contador);
 
 -- El 001 es cirujano
-if(contador%2 = 0) 
+if(contador%2 = 0) then
 set cargo = '001';
 set calle = 1;
 set ciudad = 1;
-end if
+end if;
 -- El 002 es auxiliar
-if(contador%3 = 0) 
+if(contador%3 = 0) then
 set cargo = '002';
 set calle = 2;
 set ciudad = 2;
-end if
+end if;
 -- El 003 es Veterinario
-if(contador%5 = 0) 
+if(contador%5 = 0) then
 set cargo = '003';
 set calle = 3;
 set ciudad = 3;
-end if
+end if;
 
 set telefono = concat('92230212',contador);
-
-
-
-
-
-
 
 insert into personal values(dni_empleado,nombre,apellido,cargo,telefono,calle,ciudad);
 
@@ -171,6 +165,30 @@ call insertar_calle('Los Volcanes');
 
 
 
+-- función para calcular el precio con iva
+
+ drop function if exists iva;
+
+create function iva(n_factura int) returns decimal(10,2)
+
+deterministic
+
+begin
+
+declare precio_iva decimal(10,2);
+declare precio decimal(10,2);
+
+select precio into precio from factura where n_factura=n_factura;
+
+set precio_iva = (precio * 0.21) + precio;
+
+return precio_iva;
+
+end //
+
+delimiter ;
+
+select iva(1);
 
 
 
